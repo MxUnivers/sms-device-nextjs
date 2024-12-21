@@ -3,6 +3,7 @@
 import Link from 'next/link'; // Utilisation du composant Link pour la navigation
 import Image from "next/image"; // Importation de l'image pour le logo
 import { useState } from 'react';
+import { MdPerson4 } from 'react-icons/md';
 
 export default function Sidebar() {
   // État pour gérer la page active
@@ -65,6 +66,17 @@ export default function Sidebar() {
                   d="M1 5.74038C1 4.95178 1.60441 4.3125 2.35 4.3125H14.05C14.7953 4.3125 15.4 4.95178 15.4 5.74038C15.4 6.18957 15.2003 6.61199 14.86 6.88269L14.4691 7.19207C12.5959 7.38245 11.0266 8.67945 10.3544 10.4584L8.74 11.7375C8.41938 11.9904 7.98063 11.9904 7.66 11.7375L1.54 6.88269C1.20005 6.61199 1 6.18957 1 5.74038ZM10 12.4038C10 13.6681 10.4247 14.8313 11.1306 15.7356H2.8C1.80578 15.7356 1 14.8818 1 13.8317V7.64423L7.12 12.499C7.76125 13.0077 8.63875 13.0077 9.28 12.499L10.0225 11.91C10.0084 12.0736 10 12.2373 10 12.4038Z"
                   fill="#D0D5DD"></path>
               </svg> Messages
+            </Link>
+          </li>
+
+
+          <li className={`sidebar-link flex items-center mb-2 ${activePage === '/dashboard/messages' ? 'bg-gray-700 text-blue-500' : ''}`}>
+            <Link
+              href="/dashboard/profile"
+              className="flex items-center py-2 px-3 rounded-lg hover:bg-gray-700 hover:text-blue-500 flex-1"
+              onClick={() => handleActivePage('/dashboard/messages')}
+            >
+              <MdPerson4/> Messages
             </Link>
           </li>
 

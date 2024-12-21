@@ -1,5 +1,7 @@
 "use client"
 import React, { useState } from 'react';
+import {MdOutlineSearch} from "react-icons/md";
+
 
 const MessageAdmin = () => {
   // Liste des messages fictifs
@@ -72,14 +74,14 @@ const MessageAdmin = () => {
                 value={searchQuery}
                 onChange={handleSearch}
               />
-              <button type="button" className="bg-blue-500 text-white rounded-lg px-4 py-2">
-                <span className="sm:block hidden">Search</span>
+              <button type="button" className="bg-blue-500 text-white rounded-lg px-4 py-2 ">
+                <span className="flex flex-row sm:block hidden"><MdOutlineSearch />  <span> Recherche </span></span>
               </button>
             </div>
           </div>
           <div className="bg-white shadow-front-2 dark:bg-foreground rounded-lg">
             <div className="flex flex-wrap justify-between items-center mb-4 px-6 pt-6">
-              <h4 className="text-gray-700 dark:text-gray-300 text-xl font-semibold mr-5 sm:mb-0 mb-3"> Inbox </h4>
+              <h4 className="text-gray-700 dark:text-gray-300 text-xl font-semibold mr-5 sm:mb-0 mb-3"> Message </h4>
               <select name="cars"
                 className="px-4 py-2 mr-0 text-gray-500 dark:text-gray-400 border border-gray-200 dark:border-gray-800 rounded-lg dark:bg-foreground focus:outline-none">
                 <option value="volvo">Last Months</option>
@@ -110,7 +112,7 @@ const MessageAdmin = () => {
                   <p className="text-gray-500 text-sm dark:text-gray-400 flex-shrink-0">{message.date}</p>
                   <button
                     onClick={() => toggleModal(message)}
-                    className="text-blue-500 hover:text-blue-700"
+                    className="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-400"
                   >
                     Voir
                   </button>
