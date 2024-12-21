@@ -9,7 +9,7 @@ const HomeAvantage = () => {
                     <div class="container mx-auto">
                         <div class="grid grid-cols-1 items-center md:grid-cols-2" data-aos="fade-up">
                             <div class="md:pr-10">
-                                <h6 class="text-lg md:text-[24px] font-semibold text-[#F79009] mb-3" style="font-family: 'Caveat'">
+                                <h6 class="text-lg md:text-[24px] font-semibold text-[#F79009] mb-3" style={{ fontFamily: 'Caveat' }}>
                                     Foundation Style </h6>
                                 <h4 class="text-2xl md:text-[32px] font-semibold text-gray-700 dark:text-white mb-4">
                                     <span style={{
@@ -80,7 +80,7 @@ const HomeAvantage = () => {
                                 <img class="w-full" src="assets/img/intro/components.png" alt="" />
                             </div>
                             <div>
-                                <h6 class="text-lg md:text-[24px] font-semibold text-[#F79009] mb-3" style="font-family: 'Caveat'">
+                                <h6 class="text-lg md:text-[24px] font-semibold text-[#F79009] mb-3" style={{ fontFamily: 'Caveat' }}>
                                     Component Based </h6>
                                 <h4 class="text-2xl md:text-[32px] font-semibold text-gray-700 dark:text-white mb-4"> Smart and
                                     easy-to-use <span style={{
