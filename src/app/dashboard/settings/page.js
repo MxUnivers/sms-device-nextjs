@@ -1,6 +1,6 @@
 'use client'; // Cette directive permet d'utiliser les hooks de React
 import React, { useState } from 'react';
-import { MdSms } from 'react-icons/md';
+import { MdSend, MdSms } from 'react-icons/md';
 
 const ApiSettingsPage = () => {
   // État pour gérer la clé API, le message, et le numéro de téléphone
@@ -177,7 +177,7 @@ echo $response;
               />
             </div>
             <div className="mb-6">
-            <button type="button" className="bg-blue-500 text-white rounded-lg px-6 py-2"><MdSms/> Envoyer Sms </button>
+              <button type="button" className="bg-blue-500 text-white rounded-lg px-6 py-2 flex justify-center space-x-1 align-super"><MdSend /> <span>Envoyer Sms </span> </button>
             </div>
 
             <h4 className="text-gray-700 dark:text-gray-300 text-xl font-semibold mb-6"> Phone Number </h4>
