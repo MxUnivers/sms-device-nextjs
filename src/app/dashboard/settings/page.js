@@ -2,14 +2,26 @@
 import React, { useState } from 'react';
 
 const ApiSettingsPage = () => {
-  // État pour gérer la clé API et le message
+  // État pour gérer la clé API, le message, et le numéro de téléphone
   const [apiKey] = useState('YOUR_API_KEY'); // Remplacer par une clé API générée
   const [message, setMessage] = useState(''); // Le message que l'utilisateur écrit
-  const [selectedExample, setSelectedExample] = useState('node'); // Code sélectionné (Node.js, Java, Python)
+  const [phoneNumber, setPhoneNumber] = useState(''); // Le numéro de téléphone
+  const [countryCode, setCountryCode] = useState('+1'); // Code du pays sélectionné
+  const [selectedExample, setSelectedExample] = useState('node'); // Code sélectionné (Node.js, Java, Python, PHP)
 
   // Fonction pour mettre à jour le message
   const handleMessageChange = (e) => {
     setMessage(e.target.value);
+  };
+
+  // Fonction pour mettre à jour le numéro de téléphone
+  const handlePhoneNumberChange = (e) => {
+    setPhoneNumber(e.target.value);
+  };
+
+  // Fonction pour mettre à jour le code du pays
+  const handleCountryCodeChange = (e) => {
+    setCountryCode(e.target.value);
   };
 
   // Exemples de code pour chaque langage
@@ -22,7 +34,7 @@ const url = 'https://api.sms-service.com/send';
 const sendSms = async () => {
   try {
     const response = await axios.post(url, {
-      to: '+1234567890',
+      to: '${countryCode}${phoneNumber}',
       message: '${message}',
       apiKey: apiKey,
     });
@@ -41,7 +53,7 @@ public class SmsSender {
   public static void main(String[] args) {
     try {
       String apiKey = "${apiKey}";
-      String urlString = "https://api.sms-service.com/send?to=+1234567890&message=${message}&apiKey=" + apiKey;
+      String urlString = "https://api.sms-service.com/send?to=${countryCode}${phoneNumber}&message=${message}&apiKey=" + apiKey;
       URL url = new URL(urlString);
       HttpURLConnection connection = (HttpURLConnection) url.openConnection();
       connection.setRequestMethod("POST");
@@ -62,7 +74,7 @@ url = 'https://api.sms-service.com/send'
 def send_sms():
     try:
         response = requests.post(url, data={
-            'to': '+1234567890',
+            'to': '${countryCode}${phoneNumber}',
             'message': '${message}',
             'apiKey': apiKey,
         })
@@ -70,7 +82,31 @@ def send_sms():
     except Exception as e:
         print(f"Error sending SMS: {e}")
 
-send_sms()`
+send_sms()`,
+    
+    php: `<?php
+$apiKey = "${apiKey}";
+$phoneNumber = "${countryCode}${phoneNumber}";
+$message = "${message}";
+
+$url = 'https://api.sms-service.com/send';
+$data = array(
+    'to' => $phoneNumber,
+    'message' => $message,
+    'apiKey' => $apiKey,
+);
+
+$options = array(
+    'http' => array(
+        'method'  => 'POST',
+        'header'  => "Content-type: application/x-www-form-urlencoded\r\n",
+        'content' => http_build_query($data)
+    )
+);
+$context  = stream_context_create($options);
+$response = file_get_contents($url, false, $context);
+echo $response;
+?>`
   };
 
   return (
@@ -117,6 +153,30 @@ send_sms()`
               />
             </div>
 
+            <h4 className="text-gray-700 dark:text-gray-300 text-xl font-semibold mb-6"> Phone Number </h4>
+            <div className="mb-6">
+              <label className="text-gray-700 dark:text-gray-200 text-sm font-medium mb-2">Phone Number</label>
+              <div className="flex space-x-4">
+                <select
+                  className="border border-gray-200 dark:border-gray-800 text-sm dark:text-gray-300 rounded-lg px-4 py-2 w-1/3 dark:bg-foreground"
+                  value={countryCode}
+                  onChange={handleCountryCodeChange}
+                >
+                  <option value="+1">+1 (US)</option>
+                  <option value="+44">+44 (UK)</option>
+                  <option value="+33">+33 (FR)</option>
+                  <option value="+91">+91 (IN)</option>
+                </select>
+                <input
+                  type="text"
+                  className="border border-gray-200 dark:border-gray-800 text-sm dark:text-gray-300 rounded-lg px-4 py-2 w-2/3 dark:bg-foreground"
+                  value={phoneNumber}
+                  onChange={handlePhoneNumberChange}
+                  placeholder="Phone Number"
+                />
+              </div>
+            </div>
+
             <h4 className="text-gray-700 dark:text-gray-300 text-xl font-semibold mb-6"> API Integration Examples </h4>
 
             {/* Language Selector */}
@@ -130,6 +190,7 @@ send_sms()`
                 <option value="node">Node.js</option>
                 <option value="java">Java</option>
                 <option value="python">Python</option>
+                <option value="php">PHP</option>
               </select>
             </div>
 
@@ -147,7 +208,6 @@ send_sms()`
                 className="bg-blue-500 text-white rounded-lg px-6 py-2"
               >
                 View API Documentation
-                
               </button>
             </div>
           </div>
