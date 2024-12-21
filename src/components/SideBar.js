@@ -3,7 +3,7 @@
 import Link from 'next/link'; // Utilisation du composant Link pour la navigation
 import Image from "next/image"; // Importation de l'image pour le logo
 import { useState } from 'react';
-import { MdPerson4, MdSettings } from 'react-icons/md';
+import { MdApi, MdPerson4, MdSettings } from 'react-icons/md';
 
 export default function Sidebar() {
   // État pour gérer la page active
@@ -15,7 +15,7 @@ export default function Sidebar() {
 
   return (
     <div id="dashboard-sidebar"
-      className="dashboard-sidebar ps z-50 w-64 transition-all bg-gray-800 dark:bg-foreground text-gray-100 fixed lg:left-0 top-0 -left-64 h-full">
+      className="dashboard-sidebar ps z-50 w-64 transition-all bg-gray-800  text-gray-100 fixed lg:left-0 top-0 -left-64 h-full">
       <Link href="/dashboard" className="px-6 p-8 flex items-center">
         <img className="w-7 h-7 mr-2" src="assets/img/logo.png" alt="Logo" />
         <p className="text-lg font-semibold">Manager APP</p>
@@ -79,6 +79,16 @@ export default function Sidebar() {
               <MdSettings/> Paramètre
             </Link>
           </li>
+          <li className={`sidebar-link flex items-center mb-2 ${activePage === '/dashboard/documentation' ? 'bg-gray-700 text-blue-500' : ''}`}>
+            <Link
+              href="/dashboard/documentation"
+              className="flex items-center py-2 px-3 rounded-lg hover:bg-gray-700 hover:text-blue-500 flex-1"
+              onClick={() => handleActivePage('/dashboard/documentation')}
+            >
+              <MdApi/> Documentation
+            </Link>
+          </li>
+          
 
           <li className={`sidebar-link flex items-center mb-2 ${activePage === '/dashboard/profile' ? 'bg-gray-700 text-blue-500' : ''}`}>
             <Link
