@@ -5,7 +5,7 @@ const NavbarWeb = () => {
         <>
             {/*Mobile */}
             <div
-                className="mobile-navbar overflow-y-auto fixed bg-white dark:bg-background -left-full top-0 h-full w-full transition-all z-[100]">
+                className="mobile-navbar overflow-y-auto fixed bg-white  -left-full top-0 h-full w-full transition-all z-[100]">
                 <div className="flex justify-end py-4">
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-4 text-gray-500 close-navbar-btn" fill="none"
                         viewbox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -13,20 +13,20 @@ const NavbarWeb = () => {
                     </svg>
                 </div>
                 <ul className="mx-5">
-                    
+
                     <li className="">
-                        <div className="dropdown dropdown-mobile dark:bg-foreground rounded-lg" data-dropdown="">
+                        <div className="dropdown dropdown-mobile  rounded-lg" data-dropdown="">
                             <button
-                                className="link w-full py-3 flex dark:border-gray-800 justify-between pb-5 items-center border-b border-gray-200 font-normal text-gray-500 dark:text-gray-200"
+                                className="link w-full py-3 flex  justify-between pb-5 items-center border-b border-gray-200 font-normal text-gray-500 "
                                 data-dropdown-button=""> Option
                             </button>
 
                         </div>
                     </li>
                     <li className="">
-                        <div className="dropdown dropdown-mobile dark:bg-foreground rounded-lg" data-dropdown="">
+                        <div className="dropdown dropdown-mobile  rounded-lg" data-dropdown="">
                             <button
-                                className="link w-full py-3 flex dark:border-gray-800 pb-5 justify-between items-center border-b border-gray-200 font-normal text-gray-500 dark:text-gray-200"
+                                className="link w-full py-3 flex  pb-5 justify-between items-center border-b border-gray-200 font-normal text-gray-500 "
                                 data-dropdown-button=""> Dashboard <svg className="w-3 h-auto ml-2 transition-all" width="10" height="6"
                                     data-dropdown-button="" viewbox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -34,12 +34,12 @@ const NavbarWeb = () => {
                                         fill="currentColor"></path>
                                 </svg>
                             </button>
-                            <div className="dropdown-mobile-menu dark:bg-foreground dark:text-gray-300 text-gray-700">
+                            <div className="dropdown-mobile-menu   text-gray-700">
                                 <div className="dropdown-links">
                                     <ul className="p-4">
                                         <li className="">
                                             <a href="dashboard-home.html"
-                                                className="hover:text-blue-500 text-sm block dark:hover:text-blue-500 pb-3"> Overview</a>
+                                                className="hover:text-blue-500 text-sm block  pb-3"> Overview</a>
                                         </li>
 
                                     </ul>
@@ -55,11 +55,10 @@ const NavbarWeb = () => {
 
 
 
-
             {/*Pc */}
-            <header className="relative dark:text-gray-100 sticky-header-first-content" style={{ background: `url('assets/img/intro/intro-bg.png'), linearGradient(180deg, #ffffff 0%, #f0f7fe 100%)`, backgroundSize: "cover", backgroundPosition: "center" }}>
+            <header className="relative sticky-header-first-content" style={{ background: `url('assets/img/intro/intro-bg.png'), linearGradient(180deg, #ffffff 0%, #f0f7fe 100%)`, backgroundSize: "cover", backgroundPosition: "center" }}>
 
-                <div className="w-full navbar h-20 flex items-center sticky-header -top-20">
+                <div className="w-full navbar h-20 flex items-center  sticky top-20 z-50">
                     <nav className="container mx-auto lg:px-0 px-5 flex items-center justify-between transition-all">
                         <div className="flex items-center">
                             <button type="button" className="lg:hidden block menu-btn">
@@ -81,8 +80,8 @@ const NavbarWeb = () => {
                         </button>
                         <div className="hidden lg:flex items-center">
                             <ul className="flex items-center">
-                                
-                                
+
+
                                 <li className="list-none">
                                     <div
                                         className="relative [&>div]:hover:visible [&>div]:hover:pt-3 [&>div]:hover:h-full [&>div]:hover:opacity-100 [&>div]:hover:top-auto [&>div]:hover:transition-all [&>div]:hover:z-10 pr-9">
@@ -95,12 +94,12 @@ const NavbarWeb = () => {
                                         </button>
                                         <div className="absolute top-9 invisible opacity-0 whitespace-nowrap pt-0">
                                             <div
-                                                className="max-w-sm shadow-front-3 rounded-lg whitespace-nowrap bg-white dark:bg-foreground dark:text-gray-300 text-gray-700">
+                                                className="max-w-sm shadow-front-3 rounded-lg whitespace-nowrap bg-white text-gray-700">
                                                 <div className="dropdown-links">
                                                     <ul className="p-4">
                                                         <li className="">
                                                             <a href="dashboard-home.html"
-                                                                className="hover:text-blue-500 text-sm block dark:hover:text-blue-500 pb-3"> Overview</a>
+                                                                className="hover:text-blue-500 text-sm block pb-3"> Overview</a>
                                                         </li>
 
                                                     </ul>
@@ -122,7 +121,7 @@ const NavbarWeb = () => {
                         </a>
                     </nav >
                 </div >
-                
+
 
             </header>
 

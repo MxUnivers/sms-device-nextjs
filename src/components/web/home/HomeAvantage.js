@@ -4,7 +4,7 @@ import React from 'react'
 const HomeAvantage = () => {
     return (
         <>
-            <div>
+            <div >
                 <section class="bg-gray-25 dark:bg-dark py-20">
                     <div class="container mx-auto">
                         <div class="grid grid-cols-1 items-center md:grid-cols-2" data-aos="fade-up">
@@ -14,8 +14,8 @@ const HomeAvantage = () => {
                                 <h4 class="text-2xl md:text-[32px] font-semibold text-gray-700 dark:text-white mb-4">
                                     <span style={{
                                         background: "linear-gradient(90.22deg, #2e90fa 23.44%, #3f069b 53.4%)",
-                                        webkitBackgroundClip: "text",
-                                        webkitTextFillColor: "transparent"
+                                        WebkitBackgroundClip: "text",
+                                        WebkitTextFillColor: "transparent"
                                     }}> Customize styles </span> in seconds
                                 </h4>
                                 <p class="md:text-lg text-gray-800 mb-7"> Super smart color, typography and effects styles already
@@ -85,8 +85,8 @@ const HomeAvantage = () => {
                                 <h4 class="text-2xl md:text-[32px] font-semibold text-gray-700 dark:text-white mb-4"> Smart and
                                     easy-to-use <span style={{
                                         background: "linear-gradient(90.22deg, #2e90fa 23.44%, #3f069b 53.4%)",
-                                        webkitBackgroundClip: "text",
-                                        webkitTextFillColor: "transparent"
+                                        WebkitBackgroundClip: "text",
+                                        WebkitTextFillColor: "transparent",
                                     }}> Components </span>
                                 </h4>
                                 <p class="md:text-lg text-gray-800 mb-7"> Super smart card styles already setup. Change one style and
