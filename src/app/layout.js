@@ -25,7 +25,7 @@ export default function RootLayout({ children }) {
         <meta name="copyright" content="Copyright Gulp Tailwind Starter 2023. All Rights Reserved." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased relative`}>
         {children}
       </body>
     </html>
