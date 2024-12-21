@@ -2,32 +2,32 @@ import React from 'react'
 
 export default function DashboardRecentActivity() {
     return (
-        <div class="col-span-1 dark:bg-foreground rounded-lg shadow-front-2 p-6 xl:col-span-3 lg:col-span-4">
-            <div class="flex justify-between flex-wrap mb-8">
-                <h6 class="text-base text-gray-700 dark:text-gray-100 font-semibold"> Recent Activities </h6>
+        <div className="col-span-1 dark:bg-foreground rounded-lg shadow-front-2 p-6 xl:col-span-3 lg:col-span-4">
+            <div className="flex justify-between flex-wrap mb-8">
+                <h6 className="text-base text-gray-700 dark:text-gray-100 font-semibold"> Recent Activities </h6>
                 <a href="#"
-                    class="text-base text-gray-500 dark:text-gray-400 hover:text-blue-500 dark:hover:text-blue-500"> View
+                    className="text-base text-gray-500 dark:text-gray-400 hover:text-blue-500 dark:hover:text-blue-500"> View
                     All </a>
             </div>
-            <div class="flex items-start mb-6">
-                <div class="bg-gray-100 dark:bg-background p-2 rounded-full mr-4">
+            <div className="flex items-start mb-6">
+                <div className="bg-gray-100 dark:bg-background p-2 rounded-full mr-4">
                     <svg width="16" height="16" viewbox="0 0 16 16" fill="none"
-                        class="w-5 h-5 dark:text-gray-400 text-gray-700" xmlns="http://www.w3.org/2000/svg">
+                        className="w-5 h-5 dark:text-gray-400 text-gray-700" xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M7.41762 10.1179C7.24324 10.295 6.95637 10.295 6.78199 10.1179L4.98199 8.31786C4.8048 8.14349 4.8048 7.85661 4.98199 7.68224C5.15637 7.50505 5.44324 7.50505 5.61762 7.68224L7.0998 9.16442L10.382 5.88224C10.5564 5.70505 10.8432 5.70505 11.0176 5.88224C11.1948 6.05661 11.1948 6.34349 11.0176 6.51786L7.41762 10.1179ZM15.1998 8.00005C15.1998 11.9769 11.9767 15.2 7.9998 15.2C4.02293 15.2 0.799805 11.9769 0.799805 8.00005C0.799805 4.02317 4.02293 0.800049 7.9998 0.800049C11.9767 0.800049 15.1998 4.02317 15.1998 8.00005ZM7.9998 1.70005C4.52074 1.70005 1.6998 4.52099 1.6998 8.00005C1.6998 11.4791 4.52074 14.3 7.9998 14.3C11.4789 14.3 14.2998 11.4791 14.2998 8.00005C14.2998 4.52099 11.4789 1.70005 7.9998 1.70005Z"
                             fill="currentColor"></path>
                     </svg>
                 </div>
-                <div class="mb-6">
-                    <a href="#" class="text-base hover:text-blue-500 dark:text-gray-300 text-gray-700 mb-2"> Your lisitng
+                <div className="mb-6">
+                    <a href="#" className="text-base hover:text-blue-500 dark:text-gray-300 text-gray-700 mb-2"> Your lisitng
                         Premium Duplex Apartment has been approved </a>
-                    <p class="text-gray-500 dark:text-gray-400 text-sm"> 23 March, 2022 09.40PM </p>
+                    <p className="text-gray-500 dark:text-gray-400 text-sm"> 23 March, 2022 09.40PM </p>
                 </div>
             </div>
-            <div class="flex items-start mb-6">
-                <div class="bg-gray-100 dark:bg-background p-2 rounded-full mr-4">
+            <div className="flex items-start mb-6">
+                <div className="bg-gray-100 dark:bg-background p-2 rounded-full mr-4">
                     <svg width="32" height="33" viewbox="0 0 32 33" fill="currentColor"
-                        class="w-5 h-5 dark:text-gray-400 text-gray-700" xmlns="http://www.w3.org/2000/svg">
+                        className="w-5 h-5 dark:text-gray-400 text-gray-700" xmlns="http://www.w3.org/2000/svg">
                         <mask id="path-1-outside-1_1440_8191" maskunits="userSpaceOnUse" x="2.19995" y="7.5" width="27"
                             height="17" fill="black">
                             <rect fill="white" x="2.19995" y="7.5" width="27" height="17"></rect>
@@ -43,40 +43,40 @@ export default function DashboardRecentActivity() {
                             stroke="#667085" stroke-width="0.2" mask="url(#path-1-outside-1_1440_8191)"></path>
                     </svg>
                 </div>
-                <div class="mb-6">
-                    <a href="#" class="text-base hover:text-blue-500 dark:text-gray-300 text-gray-700 mb-2"> Gage Paquette
+                <div className="mb-6">
+                    <a href="#" className="text-base hover:text-blue-500 dark:text-gray-300 text-gray-700 mb-2"> Gage Paquette
                         left a review on Premium Duplex Apartment has been approved </a>
-                    <p class="text-gray-500 dark:text-gray-400 text-sm"> 23 March, 2022 09.40PM </p>
+                    <p className="text-gray-500 dark:text-gray-400 text-sm"> 23 March, 2022 09.40PM </p>
                 </div>
             </div>
-            <div class="flex items-start mb-6">
-                <div class="bg-gray-100 dark:bg-background p-2 rounded-full mr-4">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" class="w-5 h-5 dark:text-gray-400 text-gray-700"
+            <div className="flex items-start mb-6">
+                <div className="bg-gray-100 dark:bg-background p-2 rounded-full mr-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" className="w-5 h-5 dark:text-gray-400 text-gray-700"
                         viewbox="0 0 24 24" stroke="currentColor" stroke-width="2">
                         <path stroke-linecap="round" stroke-linejoin="round"
                             d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z">
                         </path>
                     </svg>
                 </div>
-                <div class="mb-6">
-                    <a href="#" class="text-base hover:text-blue-500 dark:text-gray-300 text-gray-700 mb-2"> Someone
+                <div className="mb-6">
+                    <a href="#" className="text-base hover:text-blue-500 dark:text-gray-300 text-gray-700 mb-2"> Someone
                         bookmark your Premium Duplex Apartment listing </a>
-                    <p class="text-gray-500 dark:text-gray-400 text-sm"> 23 March, 2022 09.40PM </p>
+                    <p className="text-gray-500 dark:text-gray-400 text-sm"> 23 March, 2022 09.40PM </p>
                 </div>
             </div>
-            <div class="flex items-start mb-6">
-                <div class="bg-gray-100 dark:bg-background p-2 rounded-full mr-4">
+            <div className="flex items-start mb-6">
+                <div className="bg-gray-100 dark:bg-background p-2 rounded-full mr-4">
                     <svg width="16" height="16" viewbox="0 0 16 16" fill="none"
-                        class="w-5 h-5 dark:text-gray-400 text-gray-700" xmlns="http://www.w3.org/2000/svg">
+                        className="w-5 h-5 dark:text-gray-400 text-gray-700" xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M7.41762 10.1179C7.24324 10.295 6.95637 10.295 6.78199 10.1179L4.98199 8.31786C4.8048 8.14349 4.8048 7.85661 4.98199 7.68224C5.15637 7.50505 5.44324 7.50505 5.61762 7.68224L7.0998 9.16442L10.382 5.88224C10.5564 5.70505 10.8432 5.70505 11.0176 5.88224C11.1948 6.05661 11.1948 6.34349 11.0176 6.51786L7.41762 10.1179ZM15.1998 8.00005C15.1998 11.9769 11.9767 15.2 7.9998 15.2C4.02293 15.2 0.799805 11.9769 0.799805 8.00005C0.799805 4.02317 4.02293 0.800049 7.9998 0.800049C11.9767 0.800049 15.1998 4.02317 15.1998 8.00005ZM7.9998 1.70005C4.52074 1.70005 1.6998 4.52099 1.6998 8.00005C1.6998 11.4791 4.52074 14.3 7.9998 14.3C11.4789 14.3 14.2998 11.4791 14.2998 8.00005C14.2998 4.52099 11.4789 1.70005 7.9998 1.70005Z"
                             fill="currentColor"></path>
                     </svg>
                 </div>
-                <div class="mb-6">
-                    <a href="#" class="text-base hover:text-blue-500 dark:text-gray-300 text-gray-700 mb-2"> Someone
+                <div className="mb-6">
+                    <a href="#" className="text-base hover:text-blue-500 dark:text-gray-300 text-gray-700 mb-2"> Someone
                         bookmark your Premium Duplex Apartment listing </a>
-                    <p class="text-gray-500 dark:text-gray-400 text-sm"> 23 March, 2022 09.40PM </p>
+                    <p className="text-gray-500 dark:text-gray-400 text-sm"> 23 March, 2022 09.40PM </p>
                 </div>
             </div>
         </div>

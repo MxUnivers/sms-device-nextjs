@@ -14,7 +14,7 @@ export default function DashboardLayout({ children }) {
 
 
             <Sidebar />
-            <div class="dashboard-sidebar-overlay fixed w-full h-full inset-0 z-40 cursor-pointer bg-black opacity-70 hidden">
+            <div className="dashboard-sidebar-overlay fixed w-full h-full inset-0 z-40 cursor-pointer bg-black opacity-70 hidden">
             </div>
 
             <HeaderAdmin/>

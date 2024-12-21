@@ -5,15 +5,15 @@ export default function DashboardOverview() {
         <>
 
             <div
-                class="xl:col-span-2 lg:col-span-4 col-span-1 dark:bg-foreground rounded-lg shadow-front-2 flex justify-between items-center cursor-pointer hover:bg-blue-500 dark:hover:bg-blue-500 group p-6">
-                <div class="">
-                    <p class="text-base group-hover:text-white text-gray-500 dark:text-gray-400 mb-2 font-medium"> Active
+                className="xl:col-span-2 lg:col-span-4 col-span-1 dark:bg-foreground rounded-lg shadow-front-2 flex justify-between items-center cursor-pointer hover:bg-blue-500 dark:hover:bg-blue-500 group p-6">
+                <div className="">
+                    <p className="text-base group-hover:text-white text-gray-500 dark:text-gray-400 mb-2 font-medium"> Active
                         Listings </p>
-                    <h5 class="text-gray-700 group-hover:text-white dark:text-gray-200 font-semibold text-3xl"> 22 </h5>
+                    <h5 className="text-gray-700 group-hover:text-white dark:text-gray-200 font-semibold text-3xl"> 22 </h5>
                 </div>
-                <div class="bg-gray-100 group-hover:bg-white dark:bg-background rounded-full p-3">
+                <div className="bg-gray-100 group-hover:bg-white dark:bg-background rounded-full p-3">
                     <svg width="32" height="33" viewbox="0 0 32 33" fill="currentColor"
-                        class="w-8 h-8 dark:text-gray-400 text-gray-700 group-hover:text-blue-500"
+                        className="w-8 h-8 dark:text-gray-400 text-gray-700 group-hover:text-blue-500"
                         xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M4.62222 12.5533V22.708C4.62222 23.5104 5.25911 24.1587 6.04445 24.1587H15.4311C15.6889 24.6755 16.0044 25.1651 16.3644 25.6093H6.04445C4.47333 25.6093 3.2 24.3083 3.2 22.708V12.4445C3.2 12.0365 3.28351 11.6376 3.44516 11.2659L5.29378 7.02312C5.75022 5.97501 6.76889 5.3 7.89333 5.3H18.4178C19.5422 5.3 20.56 5.97547 21.0178 7.02312L22.8667 11.2659C23.0267 11.6376 23.1111 12.0365 23.1111 12.4445V12.5533H4.62222ZM13.8667 11.1027H21.24L19.72 7.612C19.4889 7.0884 18.9822 6.75067 18.4178 6.75067H13.8667V11.1027ZM12.4444 6.75067H7.89333C7.33111 6.75067 6.82178 7.0884 6.59333 7.612L5.07245 11.1027H12.4444V6.75067ZM25.3911 18.5691C25.6711 18.8501 25.6711 19.3125 25.3911 19.5936L22.1911 22.8576C21.9156 23.1432 21.4622 23.1432 21.1867 22.8576L19.4089 21.0443C19.1289 20.7632 19.1289 20.3008 19.4089 20.0197C19.6844 19.7341 20.1378 19.7341 20.4133 20.0197L21.6889 21.3208L24.3867 18.5691C24.6622 18.2835 25.1156 18.2835 25.3911 18.5691ZM16 20.532C16 16.928 18.8667 14.004 22.4 14.004C25.9333 14.004 28.8 16.928 28.8 20.532C28.8 24.136 25.9333 27.06 22.4 27.06C18.8667 27.06 16 24.136 16 20.532ZM22.4 25.6093C25.1511 25.6093 27.3778 23.3381 27.3778 20.532C27.3778 17.7259 25.1511 15.4547 22.4 15.4547C19.6489 15.4547 17.4222 17.7259 17.4222 20.532C17.4222 23.3381 19.6489 25.6093 22.4 25.6093Z"
@@ -22,15 +22,15 @@ export default function DashboardOverview() {
                 </div>
             </div>
             <div
-                class="xl:col-span-2 lg:col-span-4 col-span-1 dark:bg-foreground rounded-lg shadow-front-2 flex justify-between items-center cursor-pointer hover:bg-blue-500 dark:hover:bg-blue-500 group p-6">
-                <div class="">
-                    <p class="text-base group-hover:text-white text-gray-500 dark:text-gray-400 mb-2 font-medium"> Total
+                className="xl:col-span-2 lg:col-span-4 col-span-1 dark:bg-foreground rounded-lg shadow-front-2 flex justify-between items-center cursor-pointer hover:bg-blue-500 dark:hover:bg-blue-500 group p-6">
+                <div className="">
+                    <p className="text-base group-hover:text-white text-gray-500 dark:text-gray-400 mb-2 font-medium"> Total
                         Views </p>
-                    <h5 class="text-gray-700 group-hover:text-white dark:text-gray-200 font-semibold text-3xl"> 1.2k </h5>
+                    <h5 className="text-gray-700 group-hover:text-white dark:text-gray-200 font-semibold text-3xl"> 1.2k </h5>
                 </div>
-                <div class="bg-gray-100 group-hover:bg-white dark:bg-background rounded-full p-3">
+                <div className="bg-gray-100 group-hover:bg-white dark:bg-background rounded-full p-3">
                     <svg width="32" height="33" viewbox="0 0 32 33" fill="none"
-                        class="w-8 h-8 dark:text-gray-400 text-gray-700 group-hover:text-blue-500"
+                        className="w-8 h-8 dark:text-gray-400 text-gray-700 group-hover:text-blue-500"
                         xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M4.8 23.7C4.8 25.025 5.8745 26.1 7.2 26.1H28C28.44 26.1 28.8 26.46 28.8 26.9C28.8 27.34 28.44 27.7 28 27.7H7.2C4.991 27.7 3.2 25.91 3.2 23.7V6.1C3.2 5.658 3.5582 5.3 4 5.3C4.442 5.3 4.8 5.658 4.8 6.1V23.7ZM19.765 18.665C19.455 18.98 18.945 18.98 18.635 18.665L14.355 14.43L9.365 19.465C9.055 19.78 8.545 19.78 8.235 19.465C7.922 19.155 7.922 18.645 8.235 18.335L13.835 12.735C14.145 12.42 14.655 12.42 14.965 12.735L19.2 16.97L25.835 10.335C26.145 10.02 26.655 10.02 26.965 10.335C27.28 10.645 27.28 11.155 26.965 11.465L19.765 18.665Z"
@@ -39,15 +39,15 @@ export default function DashboardOverview() {
                 </div>
             </div>
             <div
-                class="xl:col-span-2 lg:col-span-4 col-span-1 dark:bg-foreground rounded-lg shadow-front-2 flex justify-between items-center cursor-pointer hover:bg-blue-500 dark:hover:bg-blue-500 group p-6">
-                <div class="">
-                    <p class="text-base group-hover:text-white text-gray-500 dark:text-gray-400 mb-2 font-medium"> Total
+                className="xl:col-span-2 lg:col-span-4 col-span-1 dark:bg-foreground rounded-lg shadow-front-2 flex justify-between items-center cursor-pointer hover:bg-blue-500 dark:hover:bg-blue-500 group p-6">
+                <div className="">
+                    <p className="text-base group-hover:text-white text-gray-500 dark:text-gray-400 mb-2 font-medium"> Total
                         Reviews </p>
-                    <h5 class="text-gray-700 group-hover:text-white dark:text-gray-200 font-semibold text-3xl"> 395 </h5>
+                    <h5 className="text-gray-700 group-hover:text-white dark:text-gray-200 font-semibold text-3xl"> 395 </h5>
                 </div>
-                <div class="bg-gray-100 group-hover:bg-white dark:bg-background rounded-full p-3">
+                <div className="bg-gray-100 group-hover:bg-white dark:bg-background rounded-full p-3">
                     <svg width="32" height="33" viewbox="0 0 32 33" fill="currentColor"
-                        class="w-8 h-8 dark:text-gray-400 text-gray-700 group-hover:text-blue-500"
+                        className="w-8 h-8 dark:text-gray-400 text-gray-700 group-hover:text-blue-500"
                         xmlns="http://www.w3.org/2000/svg">
                         <mask id="path-1-outside-1_1440_8191" maskunits="userSpaceOnUse" x="2.19995" y="7.5" width="27"
                             height="17" fill="black">
@@ -66,15 +66,15 @@ export default function DashboardOverview() {
                 </div>
             </div>
             <div
-                class="xl:col-span-2 lg:col-span-4 col-span-1 dark:bg-foreground rounded-lg shadow-front-2 flex justify-between items-center cursor-pointer hover:bg-blue-500 dark:hover:bg-blue-500 group p-6">
-                <div class="">
-                    <p class="text-base group-hover:text-white text-gray-500 dark:text-gray-400 mb-2 font-medium"> Favourite
+                className="xl:col-span-2 lg:col-span-4 col-span-1 dark:bg-foreground rounded-lg shadow-front-2 flex justify-between items-center cursor-pointer hover:bg-blue-500 dark:hover:bg-blue-500 group p-6">
+                <div className="">
+                    <p className="text-base group-hover:text-white text-gray-500 dark:text-gray-400 mb-2 font-medium"> Favourite
                         Listings </p>
-                    <h5 class="text-gray-700 group-hover:text-white dark:text-gray-200 font-semibold text-3xl"> 12 </h5>
+                    <h5 className="text-gray-700 group-hover:text-white dark:text-gray-200 font-semibold text-3xl"> 12 </h5>
                 </div>
-                <div class="bg-gray-100 group-hover:bg-white dark:bg-background rounded-full p-3">
+                <div className="bg-gray-100 group-hover:bg-white dark:bg-background rounded-full p-3">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none"
-                        class="w-8 h-8 dark:text-gray-400 text-gray-700 group-hover:text-blue-500" viewbox="0 0 24 24"
+                        className="w-8 h-8 dark:text-gray-400 text-gray-700 group-hover:text-blue-500" viewbox="0 0 24 24"
                         stroke="currentColor" stroke-width="2">
                         <path stroke-linecap="round" stroke-linejoin="round"
                             d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z">
