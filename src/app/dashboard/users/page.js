@@ -1,13 +1,30 @@
 'use client'; // Cette directive permet d'utiliser les hooks de React
 
-import { useState } from 'react';
+import { useState } from 'react'; // Import de useState pour gérer l'état du modal
+import { FaEye, FaBan, FaSyncAlt } from 'react-icons/fa'; // Import des icônes de React Icons
 
 export default function Users() {
-  // Etat pour afficher ou masquer le modal
+  // État pour afficher ou masquer les modals
   const [showModal, setShowModal] = useState(false);
+  const [modalAction, setModalAction] = useState(""); // Action pour identifier le type de modal (Voir, Bloquer, Recharger)
 
-  // Fonction pour afficher/fermer le modal
-  const toggleModal = () => setShowModal(!showModal);
+  // Fonction pour afficher/fermer les modals
+  const toggleModal = (action) => {
+    setModalAction(action);
+    setShowModal(!showModal);
+  };
+
+  // Fonction pour bloquer l'utilisateur
+  const handleBlock = () => {
+    console.log("Utilisateur bloqué");
+    setShowModal(false); // Ferme le modal après le blocage
+  };
+
+  // Fonction pour recharger l'utilisateur
+  const handleReload = () => {
+    console.log("Utilisateur rechargé");
+    setShowModal(false); // Ferme le modal après le rechargement
+  };
 
   return (
     <div className="dashboard-content transition-all duration-200 dark:bg-background lg:ml-64 ml-0 mt-20 min-h-[calc(100vh-80px)] p-7">
@@ -23,63 +40,73 @@ export default function Users() {
             </div>
             {/* Bouton pour ouvrir le modal */}
             <button
-              type="button"
-              onClick={toggleModal} // Afficher le modal lorsque ce bouton est cliqué
+              onClick={() => toggleModal("add")} // Ouvre le modal pour ajouter un utilisateur
               className="flex items-center bg-blue-500 hover:bg-blue-600 text-white rounded px-3 py-2.5 mb-4"
             >
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2" className="h-6 w-6 mr-2">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M12 4v16m8-8H4"></path>
-              </svg>
-              Nouvelle utilisateur
+              </svg> Nouvelle utilisateur
             </button>
           </div>
 
-          {/* Modal pour Ajouter un Nouvel Utilisateur */}
+          {/* Modal pour Ajouter un Nouvel Utilisateur ou Action */}
           {showModal && (
             <div className="fixed inset-0 bg-gray-800 bg-opacity-50 flex justify-center items-center z-50">
               <div className="bg-white p-6 rounded-md shadow-md w-96">
-                <h3 className="text-lg font-semibold mb-4">Ajouter un nouvel utilisateur</h3>
+                <h3 className="text-lg font-semibold mb-4">
+                  {modalAction === "block" ? "Confirmer le blocage" : modalAction === "reload" ? "Confirmer le rechargement" : "Ajouter un nouvel utilisateur"}
+                </h3>
                 <form>
-                  <div className="mb-4">
-                    <label htmlFor="name" className="block text-sm font-medium text-gray-700">Nom</label>
-                    <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-                    />
-                  </div>
-
-                  <div className="mb-4">
-                    <label htmlFor="email" className="block text-sm font-medium text-gray-700">Email</label>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-                    />
-                  </div>
-
-                  <div className="flex justify-end gap-4">
-                    <button
-                      type="button"
-                      onClick={toggleModal} // Fermer le modal lorsque le bouton "Annuler" est cliqué
-                      className="px-4 py-2 bg-gray-300 rounded-md"
-                    >
-                      Annuler
-                    </button>
-                    <button
-                      type="submit"
-                      className="px-4 py-2 bg-blue-500 text-white rounded-md"
-                    >
-                      Ajouter
-                    </button>
-                  </div>
+                  {modalAction === "block" && (
+                    <div className="mb-4">
+                      <p>Êtes-vous sûr de vouloir bloquer cet utilisateur ?</p>
+                      <div className="mt-4 flex justify-end gap-4">
+                        <button onClick={() => setShowModal(false)} className="px-4 py-2 bg-gray-300 rounded-md">Annuler</button>
+                        <button onClick={handleBlock} className="px-4 py-2 bg-red-500 text-white rounded-md">Bloquer</button>
+                      </div>
+                    </div>
+                  )}
+                  {modalAction === "reload" && (
+                    <div className="mb-4">
+                      <p>Êtes-vous sûr de vouloir recharger cet utilisateur ?</p>
+                      <div className="mt-4 flex justify-end gap-4">
+                        <button onClick={() => setShowModal(false)} className="px-4 py-2 bg-gray-300 rounded-md">Annuler</button>
+                        <button onClick={handleReload} className="px-4 py-2 bg-blue-500 text-white rounded-md">Recharger</button>
+                      </div>
+                    </div>
+                  )}
+                  {modalAction === "add" && (
+                    <>
+                      <div className="mb-4">
+                        <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-200">Nom</label>
+                        <input
+                          type="text"
+                          id="name"
+                          className="w-full p-2 mt-1 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
+                          placeholder="Nom de l'utilisateur"
+                        />
+                      </div>
+                      <div className="mb-4">
+                        <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-200">Email</label>
+                        <input
+                          type="email"
+                          id="email"
+                          className="w-full p-2 mt-1 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
+                          placeholder="Email de l'utilisateur"
+                        />
+                      </div>
+                      <div className="flex justify-end gap-4">
+                        <button onClick={() => setShowModal(false)} className="px-4 py-2 bg-gray-300 rounded-md">Annuler</button>
+                        <button type="submit" className="px-4 py-2 bg-blue-500 text-white rounded-md">Ajouter</button>
+                      </div>
+                    </>
+                  )}
                 </form>
               </div>
             </div>
           )}
 
+          {/* Table des utilisateurs */}
           <div className="bg-white shadow-front-2 dark:bg-foreground rounded-lg mb-7 overflow-hidden">
             <div className="flex flex-col">
               <div className="overflow-x-auto sm:-mx-6 lg:-mx-8">
@@ -105,7 +132,7 @@ export default function Users() {
                         </tr>
                       </thead>
                       <tbody>
-                        {/* Utilisateur exemple */}
+                        {/* Exemple d'utilisateur */}
                         <tr className="align-middle hover:bg-gray-50 dark:hover:bg-background">
                           <td className="border-b border-gray-200 dark:border-gray-900 whitespace-nowrap text-sm font-medium text-gray-700 dark:text-gray-300 px-6 py-3">
                             <div className="flex items-center mr-10">
@@ -123,14 +150,26 @@ export default function Users() {
                             03 May, 2022 </td>
                           <td className="border-b border-gray-200 dark:border-gray-900 whitespace-nowrap text-sm font-medium text-gray-700 dark:text-gray-300 px-6 py-3">
                             $150.25 </td>
-                          <td className="border-b border-gray-200 dark:border-gray-900 whitespace-nowrap text-sm font-medium text-gray-700 dark:text-gray-300 px-6 py-3">
-                            <div className="flex items-center">
-                              {/* Buttons pour actions */}
-                              <button type="button" className="border mr-2 border-gray-200 hover:bg-blue-500 dark:hover:border-blue-500 hover:text-white text-gray-700 dark:text-gray-300 dark:border-gray-800 rounded-full w-8 h-8 flex justify-center items-center">
-                                {/* Icone Edit */}
+                          <td className="relative border-b border-gray-200 dark:border-gray-900 whitespace-nowrap text-sm font-medium text-gray-700 dark:text-gray-300 px-6 py-3">
+                            {/* Boutons Actions */}
+                            <div className="flex items-center space-x-3">
+                              <button
+                                onClick={() => toggleModal("view")}
+                                className="px-4 py-2 bg-green-500 text-white rounded-md hover:bg-green-400"
+                              >
+                                <FaEye className="inline-block mr-2" /> Voir
                               </button>
-                              <button type="button" className="border mr-2 border-gray-200 hover:bg-blue-500 dark:hover:border-blue-500 hover:text-white text-gray-700 dark:text-gray-300 dark:border-gray-800 rounded-full w-8 h-8 flex justify-center items-center">
-                                {/* Icone Delete */}
+                              <button
+                                onClick={() => toggleModal("block")}
+                                className="px-4 py-2 bg-yellow-500 text-white rounded-md hover:bg-yellow-400"
+                              >
+                                <FaBan className="inline-block mr-2" /> Bloquer
+                              </button>
+                              <button
+                                onClick={() => toggleModal("reload")}
+                                className="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-400"
+                              >
+                                <FaSyncAlt className="inline-block mr-2" /> Recharger
                               </button>
                             </div>
                           </td>
