@@ -1,5 +1,6 @@
 'use client'; // Cette directive permet d'utiliser les hooks de React
 import React, { useState } from 'react';
+import { MdSms } from 'react-icons/md';
 
 const ApiSettingsPage = () => {
   // État pour gérer la clé API, le message, et le numéro de téléphone
@@ -45,7 +46,7 @@ const sendSms = async () => {
 };
 
 sendSms();`,
-    
+
     java: `import java.net.*;
 import java.io.*;
 
@@ -65,7 +66,7 @@ public class SmsSender {
     }
   }
 }`,
-    
+
     python: `import requests
 
 apiKey = '${apiKey}'
@@ -83,7 +84,7 @@ def send_sms():
         print(f"Error sending SMS: {e}")
 
 send_sms()`,
-    
+
     php: `<?php
 $apiKey = "${apiKey}";
 $phoneNumber = "${countryCode}${phoneNumber}";
@@ -142,6 +143,29 @@ echo $response;
             </div>
 
             <h4 className="text-gray-700 dark:text-gray-300 text-xl font-semibold mb-6"> Message Input </h4>
+
+            <div className="mb-6">
+              <div className="flex space-x-4">
+                <select
+                  className="border border-gray-200 dark:border-gray-800 text-sm dark:text-gray-300 rounded-lg px-4 py-2 w-1/3 dark:bg-foreground"
+                  value={countryCode}
+                  onChange={handleCountryCodeChange}
+                >
+                  <option value="+1">+1 (US)</option>
+                  <option value="+44">+44 (UK)</option>
+                  <option value="+33">+33 (FR)</option>
+                  <option value="+91">+91 (IN)</option>
+                </select>
+                <input
+                  type="text"
+                  className="border border-gray-200 dark:border-gray-800 text-sm dark:text-gray-300 rounded-lg px-4 py-2 w-2/3 dark:bg-foreground"
+                  value={phoneNumber}
+                  onChange={handlePhoneNumberChange}
+                  placeholder="Phone Number"
+                />
+              </div>
+            </div>
+
             <div className="mb-6">
               <label className="text-gray-700 dark:text-gray-200 text-sm font-medium mb-2">Enter Your Message</label>
               <textarea
@@ -151,6 +175,9 @@ echo $response;
                 value={message}
                 onChange={handleMessageChange}
               />
+            </div>
+            <div className="mb-6">
+            <button type="button" className="bg-blue-500 text-white rounded-lg px-6 py-2"><MdSms/> Envoyer Sms </button>
             </div>
 
             <h4 className="text-gray-700 dark:text-gray-300 text-xl font-semibold mb-6"> Phone Number </h4>
