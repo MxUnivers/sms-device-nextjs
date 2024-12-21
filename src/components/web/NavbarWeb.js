@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link';
 
 const NavbarWeb = () => {
     return (
@@ -38,8 +39,8 @@ const NavbarWeb = () => {
                                 <div className="dropdown-links">
                                     <ul className="p-4">
                                         <li className="">
-                                            <a href="dashboard-home.html"
-                                                className="hover:text-blue-500 text-sm block  pb-3"> Overview</a>
+                                            <Link href="dashboard-home.html"
+                                                className="hover:text-blue-500 text-sm block  pb-3"> Sms</Link>
                                         </li>
 
                                     </ul>
@@ -67,10 +68,10 @@ const NavbarWeb = () => {
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
                                 </svg>
                             </button>
-                            <a href="index.htm" className="flex items-center">
+                            <Link href="/" className="flex items-center">
                                 <img className="w-11 h-11 mr-3" src="assets/img/logo.svg" alt="" />
                                 <h6 className="text-base font-medium">Sms Device</h6>
-                            </a>
+                            </Link>
                         </div>
                         <button type="button" className="text-white hover:text-blue-500 flex items-center lg:hidden">
                             <span className="lg:mr-3 mr-0 relative">
@@ -98,8 +99,8 @@ const NavbarWeb = () => {
                                                 <div className="dropdown-links">
                                                     <ul className="p-4">
                                                         <li className="">
-                                                            <a href="dashboard-home.html"
-                                                                className="hover:text-blue-500 text-sm block pb-3"> Overview</a>
+                                                            <Link href="#"
+                                                                className="hover:text-blue-500 text-sm block pb-3"> Overview</Link>
                                                         </li>
 
                                                     </ul>
@@ -109,16 +110,16 @@ const NavbarWeb = () => {
                                     </div>
                                 </li>
                                 <li className="list-none">
-                                    <a className="link hover:text-blue-500 flex items-center pr-9" href="https://accomu-doc.netlify.app/"
-                                        target="_blank" rel="noopener noreferrer"> Documentation </a>
+                                    <Link className="link hover:text-blue-500 flex items-center pr-9" href="#"
+                                        target="_blank" rel="noopener noreferrer"> Documentation </Link>
                                 </li>
                             </ul>
                         </div>
-                        <a href="https://themeforest.net/item/accomu-directory-listings-html-template/39971703" target="_blank"
+                        <Link href="/login" 
                             type="button"
                             className="hidden lg:inline-flex items-center px-5 py-3 rounded-full border border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white">
-                            <span className="xl:block hidden">Purchase Now</span>
-                        </a>
+                            <span className="xl:block hidden">Compte</span>
+                        </Link>
                     </nav >
                 </div >
 

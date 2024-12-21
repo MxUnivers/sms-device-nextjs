@@ -1,6 +1,6 @@
 import React from 'react'
 
-const LoginPage = () => {
+const SignUpPage = () => {
     return (
         <section>
             <div className="container mx-auto">
@@ -12,10 +12,12 @@ const LoginPage = () => {
                                 <img className="w-20 mx-auto h-auto mb-1" src="assets/img/logo-2.png" alt="" />
                             </a>
                             <p className="text-gray-700 font-semibold text-lg mb-6"> Accommo </p>
-                            <h1 className="text-gray-700 text-3xl capitalize font-semibold mb-3"> sign in to your account </h1>
-                            <p className="text-base text-gray-500 mb-7"> If you haven’t any account, please <a href="sign-up.html"
-                                className="text-blue-500 font-medium">Register</a>
+                            <h1 className="text-gray-700 text-3xl capitalize font-semibold mb-3"> Register an account </h1>
+                            <p className="text-base text-gray-500 mb-7"> If you haven’t any account, please <a href="sign-in.html"
+                                className="text-blue-500 font-medium">Sign In</a>
                             </p>
+                            <input type="radio" id="html" name="fav_language" value="HTML" />   <label for="html">Agent</label>
+                            <input type="radio" id="css" name="fav_language" value="CSS" />   <label for="css">User</label>
                         </div>
                         <div className="">
                             <label for="" className="text-gray-700 font-medium mb-1">Email <sup>*</sup></label>
@@ -124,4 +126,4 @@ const LoginPage = () => {
     )
 }
 
-export default LoginPage
+export default SignUpPage
