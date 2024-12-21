@@ -7,7 +7,7 @@ export default function Home() {
       <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
         {/* Logo personnalisé */}
         <Image
-          className="dark:invert"
+          className=""
           src="/your-logo.png" // Changez l'image par la vôtre
           alt="Your logo"
           width={180}
@@ -20,14 +20,14 @@ export default function Home() {
         <div className="flex gap-4 items-center flex-col sm:flex-row mt-8">
           <Link
             href="/dashboard"  // Lien vers le tableau de bord
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
+            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
           >
             <span>Accéder au tableau de bord</span>
           </Link>
 
           <Link
             href="/dashboard/users"  // Lien vers la gestion des utilisateurs
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
+            className="rounded-full border border-solid border-black/[.08]  transition-colors flex items-center justify-center hover:bg-[#f2f2f2] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
           >
             <span>Gestion des utilisateurs</span>
           </Link>

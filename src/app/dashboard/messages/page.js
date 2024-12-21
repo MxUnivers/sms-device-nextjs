@@ -1,6 +1,6 @@
 "use client"
-import React, { useState } from 'react';
-import {MdOutlineSearch} from "react-icons/md";
+import React, { useEffect, useState } from 'react';
+import { MdOutlineSearch } from "react-icons/md";
 
 
 const MessageAdmin = () => {
@@ -53,6 +53,22 @@ const MessageAdmin = () => {
       message.user.toLowerCase().includes(searchQuery.toLowerCase()) ||
       message.description.toLowerCase().includes(searchQuery.toLowerCase())
   );
+
+
+  // Handle closing the modal with the Esc key
+  useEffect(() => {
+    const handleEsc = (e) => {
+      if (e.key === 'Escape') {
+        setShowModal(false);
+      }
+    };
+
+    document.addEventListener('keydown', handleEsc);
+
+    return () => {
+      document.removeEventListener('keydown', handleEsc);
+    };
+  }, []);
 
   return (
     <div className="dashboard-content transition-all duration-200 dark:bg-background lg:ml-64 ml-0 mt-20 min-h-[calc(100vh-80px)] p-7">
