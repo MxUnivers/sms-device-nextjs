@@ -115,7 +115,7 @@ const NavbarWeb = () => {
                                 </li>
                             </ul>
                         </div>
-                        <Link href="/login" 
+                        <Link href="/dashboard" 
                             type="button"
                             className="hidden lg:inline-flex items-center px-5 py-3 rounded-full border border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white">
                             <span className="xl:block hidden">Compte</span>
