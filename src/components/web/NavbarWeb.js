@@ -102,6 +102,10 @@ const NavbarWeb = () => {
                                                             <Link href="#"
                                                                 className="hover:text-blue-500 text-sm block pb-3"> Overview</Link>
                                                         </li>
+                                                        <li className="">
+                                                            <Link href="/login"
+                                                                className="hover:text-blue-500 text-sm block pb-3"> Connexion</Link>
+                                                        </li>
 
                                                     </ul>
                                                 </div>

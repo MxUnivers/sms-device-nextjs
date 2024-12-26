@@ -13,7 +13,7 @@ const SignUpPage = () => {
                             </a>
                             <p className="text-gray-700 font-semibold text-lg mb-6"> Accommo </p>
                             <h1 className="text-gray-700 text-3xl capitalize font-semibold mb-3"> Register an account </h1>
-                            <p className="text-base text-gray-500 mb-7"> If you haven’t any account, please <a href="sign-in.html"
+                            <p className="text-base text-gray-500 mb-7"> If you haven’t any account, please <a href="#"
                                 className="text-blue-500 font-medium">Sign In</a>
                             </p>
                             <input type="radio" id="html" name="fav_language" value="HTML" />   <label for="html">Agent</label>
