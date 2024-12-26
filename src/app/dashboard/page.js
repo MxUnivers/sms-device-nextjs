@@ -9,11 +9,11 @@ import DashbordAnalytic from "@/components/dashboard/DashbordAnalytics";
 export default function DashboardHome() {
   return (
     <div className="dashboard-content transition-all duration-200 lg:ml-64 ml-0 mt-20 min-h-[calc(100vh-80px)] p-7">
-      <section class="">
-        <div class="container mx-auto">
-          <h3 class="text-gray-700 text-3xl  font-medium mb-7"> Tableau de bord </h3>
+      <section className="">
+        <div className="container mx-auto">
+          <h3 className="text-gray-700 text-3xl  font-medium mb-7"> Tableau de bord </h3>
 
-          <div class="grid xl:grid-cols-8 lg:grid-cols-2 grid-cols-1 gap-7">
+          <div className="grid xl:grid-cols-8 lg:grid-cols-2 grid-cols-1 gap-7">
 
             {/*Dashboard overview section */}
             <DashboardOverview />

@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Image from "next/image"; // Pour l'image du profil
+import { toast } from 'react-toastify';
 
 export default function HeaderAdmin() {
     // Etat pour afficher ou masquer le modal de déconnexion
@@ -17,6 +18,7 @@ export default function HeaderAdmin() {
     const handleLogout = () => {
         console.log("Utilisateur déconnecté");
         toggleModal(); // Ferme le modal après la déconnexion
+        toast.info("Déconnecté")
     };
 
     // Fonction pour gérer l'ouverture/fermeture du dropdown
