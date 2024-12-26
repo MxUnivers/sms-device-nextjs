@@ -1,6 +1,9 @@
 // src/pages/_app.js
 import Head from 'next/head';
 import '../app/globals.css'; // Importez vos styles globaux ici
+import { Provider } from 'react-redux';
+import { store } from '@/features/store';
+import { ToastContainer } from 'react-toastify';
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -14,7 +17,10 @@ function MyApp({ Component, pageProps }) {
         <link rel="stylesheet" href="/assets/css/main.css" />
         <link rel="stylesheet" href="/assets/css/custom.css" />
       </Head>
-      <Component {...pageProps} />
+      <Provider store={store}>
+        <ToastContainer />
+        <Component {...pageProps} />
+      </Provider>
     </>
   );
 }
