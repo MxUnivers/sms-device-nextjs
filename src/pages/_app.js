@@ -18,8 +18,9 @@ function MyApp({ Component, pageProps }) {
         <link rel="stylesheet" href="/assets/css/main.css" />
         <link rel="stylesheet" href="/assets/css/custom.css" />
       </Head>
+
+      <ToastContainer />
       <Provider store={store}>
-        <ToastContainer />
         <Component {...pageProps} />
       </Provider>
     </>
